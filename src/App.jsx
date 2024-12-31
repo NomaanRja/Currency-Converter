@@ -36,7 +36,7 @@ function App() {
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
-                       
+                       convert()
                     }}
                 >
                     <div className="w-full mb-1">
@@ -44,8 +44,8 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyOptions={options}
-                            onCureencyChange={(currency)=>setAmount(amount)}
                             selectCurrency={from}
+                            onCurrencyChange={(currency)=>setFrom(currency)}
                             onAmountChange={(amount)=>setAmount(amount)}
                         />
                     </div>
@@ -63,8 +63,8 @@ function App() {
                             label="To"
                             amount={convertedAmount}
                             currencyOptions={options}
-                            onCureencyChange={(currency)=>SetTo(currency)}
-                            selectCurrency={from}
+                            onCurrencyChange={(currency)=>SetTo(currency)}
+                            selectCurrency={to}
                             amountDisable
                             
                         />
